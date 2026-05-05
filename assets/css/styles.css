@@ -1,6 +1,21 @@
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family:  "Noto Sans SC", "Roboto", sans-serif;
+}
+
+/* Body and Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: 2rem 0;
+}
+
+
 /* navbar*/
-
-
 
 .navbar-custom .nav-link {
     color: #3B2F2F;
@@ -19,4 +34,15 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/BannerE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:white;
+    padding: 8rem 0;
 }
