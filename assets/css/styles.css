@@ -1,0 +1,22 @@
+/* navbar*/
+
+
+
+.navbar-custom .nav-link {
+    color: #3B2F2F;
+}
+
+.navbar-custom .nav-link.active {
+    font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+    color:aliceblue;
+}
+
+/* Make the navbar sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}

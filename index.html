@@ -27,11 +27,115 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light  navbar-custom" style="background-color: #0077bb;"
+        data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/Logo-h.png" alt="Logo" width="50">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Homework</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admissions</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <button id="langBtn" class="btn" >中文</button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Header -->
 
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/68e551a4bc.js" crossorigin="anonymous"></script>
+    <!--   google fonts -->
+    <script src="https://fonts.googleapis.com/css2?family=Handlee&display=swap"></script>
 
 
-
-
-    
 </body>
+<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+
+<script>
+    document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                let section = document.querySelector(e.target.getAttribute("href"));
+                if (section) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                    window.scroll({
+                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                        behavior: "smooth",
+                    });
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show"); // Collapse navbar
+                }
+            });
+        });
+</script>
+
+<script>
+    let isChinese = false;
+    const langBtn = document.getElementById('langBtn');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const title = document.querySelector('title');
+
+    const englishTexts = ['Home', 'About', 'Classes', 'Homework', 'Activities', 'Admissions', 'Contact'];
+    const chineseTexts = ['首页', '关于', '课程', '作业', '活动', '招生', '联系'];
+
+    langBtn.addEventListener('click', function () {
+        isChinese = !isChinese;
+        if (isChinese) {
+            langBtn.textContent = 'English';
+            title.textContent = '培英中文学校';
+            navLinks.forEach((link, index) => {
+                link.textContent = chineseTexts[index];
+            });
+        } else {
+            langBtn.textContent = '中文';
+            title.textContent = 'Pei Ying Mandarin School';
+            navLinks.forEach((link, index) => {
+                link.textContent = englishTexts[index];
+            });
+        }
+    });
+</script>
+
+
+
+</html>
