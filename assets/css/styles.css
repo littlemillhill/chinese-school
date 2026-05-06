@@ -9,7 +9,7 @@ body {
 
 :root {
     --primary-color: #0077bb;
-    --secondary-color: #3a0cc5;
+    --secondary-color: #f2f1f7;
     --background-color-1: #f8fafb;
     --background-color-2: #fff2ef;
     --text-color: #626161;
@@ -149,20 +149,27 @@ h6 {
 /*footer section*/
 /*contacts section*/
 #contacts {
-    background-color: var(--footer-color);
-    color: white;
-    padding: 2rem 0;
-}
+    background-color: var(--secondary-color);
+   
+    }
 
 #contacts i {
 
-    color: white;
     font-size: 1rem;
     margin-top: 5px;
 }
 
-/*opening times table*/
-#contacts .table-dark * {
-    background-color: transparent;
+
+/*copyright section*/
+
+#copyright {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+#copyright p {
+
+    line-height: 10px;
 
 }
