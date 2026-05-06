@@ -1,13 +1,49 @@
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-family:  "Noto Sans SC", "Roboto", sans-serif;
-}
-
+/* General Styles */
 /* Body and Layout */
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+:root {
+    --primary-color: #0077bb;
+    --secondary-color: #3a0cc5;
+    --background-color: #f8f9fa;
+    --text-color: #626161;
+}
+
+i {
+
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Noto Sans SC", "Roboto", sans-serif;
+}
+
+/* Subtitle styles */
+.subtitle-1 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.subtitle-2 {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
 }
 
 main {
@@ -23,42 +59,48 @@ main {
 
 .navbar-custom .nav-link.active {
     font-weight: bold;
+    color: aliceblue;
 }
 
 .navbar-custom .nav-link {
-    color:aliceblue;
+    color: aliceblue;
 }
 
 /* Make the navbar sticky */
 .navbar {
+    background-color: var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
+   
 }
-
+/*Translate button*/
+#langBtn {
+      color:  aliceblue;
+}
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/BannerB.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/BannerB.jpg');
     background-size: cover;
-    background-position: 50% 100%;
+    background-position: 50% 55%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 80vh;
-  
-   width: 100%;
-   position: relative;
-    color:white;
-    padding: 8rem 0;
-    
-}
- .hero .container {
-   position: relative;
-   /* Ensures content stays above the overlay */
- }
+    height: 75vh;
+    width: 100%;
+    color: white;
+    padding: 5rem 0;
 
- .hero p {
+}
+
+
+.hero p {
     font-size: 1.25rem;
     max-width: 600px;
-    margin: 0 auto 2rem auto;  
- }
+    margin: 0 auto 2rem auto;
+}
+
+.hero .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.2rem;
