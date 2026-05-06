@@ -5,22 +5,22 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
     --primary-color: #0077bb;
     --secondary-color: #4522f2;
-    --background-color-1: #eef9ff;
-    --background-color-2: #fff2ef;
+    --background-color-1: #f2f9fe;
+    --background-color-2: #f9f8f8;
 
     --text-color: #626161;
     --footer-color: #033f62;
 }
 
 
-section {
-    padding-top: 50px;
-}
+
 
 
 
@@ -77,19 +77,38 @@ h6 {
     color: aliceblue;
 }
 
-/* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/BannerB.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
     height: 65vh;
     width: 100%;
+    position: relative;
     color: white;
-    padding-top: 7rem;
-
+    margin-top: 0;
+    padding-top: 0;
 }
 
+.hero-slide {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
 
 #hero p {
     font-size: 1.25rem;
@@ -105,11 +124,16 @@ h6 {
 }
 
 
+
 /***main content***/
+main section {
+    padding-top: 50px;
+}
 
 /*classes section*/
 #classes {
     background-color: var(--background-color-1);
+    padding-bottom: 6rem;
 }
 
 #classes i {
@@ -120,8 +144,11 @@ h6 {
     margin-top: 10px;
     margin-left: 10px;
 }
+
 #classes .btn {
-    width:100%;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*enrollment section*/
@@ -151,13 +178,13 @@ h6 {
 
 /*Testimonial Section*/
 #testimonials {
-    background-color:var(--background-color-1);
+    background-color: var(--background-color-1);
 }
 
 .testimonial-image {
-   width: 100px;
-   height: 100px;
- }
+    width: 100px;
+    height: 100px;
+}
 
 /*contacts section*/
 
@@ -172,7 +199,7 @@ h6 {
 .map-container iframe {
     width: 100%;
     max-width: 60vw;
-    position:50% 50%;
+    position: 50% 50%;
     height: 280px;
     margin: auto;
     padding-bottom: 20px;
@@ -202,40 +229,41 @@ footer * {
 /*************Media query:tablets and larger(576px and up)*/
 @media screen and (min-width:576px) {
 
-@media (max-width: 576px) {
-  .map-container  {
-    height: 200px;
-    padding-right: 10px;
-  }
-}
+    @media (max-width: 576px) {
+        .map-container {
+            height: 200px;
+            padding-right: 10px;
+        }
+    }
 
-/*************************************************/
-/*************Media query:tablets and larger(768px and up)*/
-@media screen and (min-width:768px) {
+    /*************************************************/
+    /*************Media query:tablets and larger(768px and up)*/
+    @media screen and (min-width:768px) {
 
-@media (max-width: 768px) {
-  .map-container {
-    height: 300px;
-  }
-}
-/*************************************************/
-/*************Media query:tablets and larger(992px and up)*/
-@media screen and (min-width:992px) {
+        @media (max-width: 768px) {
+            .map-container {
+                height: 300px;
+            }
+        }
 
-@media (max-width: 992px) {
-  .map-container  {
-    height: 400px;
-    padding-right: 10px;
-  }
-}
+        /*************************************************/
+        /*************Media query:tablets and larger(992px and up)*/
+        @media screen and (min-width:992px) {
 
-/*************************************************/
-/*************Media query:tablets and larger(1200px and up)*/
-@media screen and (min-width:1200px) {
+            @media (max-width: 992px) {
+                .map-container {
+                    height: 400px;
+                    padding-right: 10px;
+                }
+            }
 
-@media (max-width: 1200px) {
-  .map-container  {
-    height: 600px;
-    padding-right: 10px;
-  }
-}
+            /*************************************************/
+            /*************Media query:tablets and larger(1200px and up)*/
+            @media screen and (min-width:1200px) {
+
+                @media (max-width: 1200px) {
+                    .map-container {
+                        height: 600px;
+                        padding-right: 10px;
+                    }
+                }
