@@ -9,9 +9,10 @@ body {
 
 :root {
     --primary-color: #0077bb;
-    --secondary-color: #f2f1f7;
-    --background-color-1: #f8fafb;
+    --secondary-color: #4522f2;
+    --background-color-1: #eef9ff;
     --background-color-2: #fff2ef;
+
     --text-color: #626161;
     --footer-color: #033f62;
 }
@@ -145,13 +146,15 @@ h6 {
     font-weight: bold;
 }
 
+/*Testimonial Section*/
+#testimonials {
+    background-color:var(--background-color-1);
+}
 
-/*footer section*/
+
+
 /*contacts section*/
-#contacts {
-    background-color: var(--secondary-color);
-   
-    }
+
 
 #contacts i {
 
@@ -159,10 +162,20 @@ h6 {
     margin-top: 5px;
 }
 
+/*google map section*/
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    height:auto;
+    margin: auto;
+}
+
+
+/*footer section*/
 
 /*copyright section*/
 
-#copyright {
+footer * {
     background-color: black;
     color: white;
     padding: 5px;
