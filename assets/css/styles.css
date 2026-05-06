@@ -39,10 +39,26 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/BannerE.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/BannerB.jpg');
     background-size: cover;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 80vh;
+  
+   width: 100%;
+   position: relative;
     color:white;
     padding: 8rem 0;
+    
 }
+ .hero .container {
+   position: relative;
+   /* Ensures content stays above the overlay */
+ }
+
+ .hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;  
+ }
