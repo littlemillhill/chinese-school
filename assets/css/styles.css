@@ -222,6 +222,17 @@ footer * {
 
 }
 
+/*+++++++++++++++classes page ++++++++++++++++++++*/
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#year1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 
