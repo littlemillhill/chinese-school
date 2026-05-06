@@ -13,11 +13,12 @@ body {
     --background-color-1: #f8fafb;
     --background-color-2: #fff2ef;
     --text-color: #626161;
+    --footer-color: #033f62;
 }
 
 
 section {
-    padding-top:50px;
+    padding-top: 50px;
 }
 
 
@@ -56,7 +57,8 @@ h6 {
     color: aliceblue;
 }
 
-.navbar-custom .nav-link ,.navbar-toggler {
+.navbar-custom .nav-link,
+.navbar-toggler {
     color: aliceblue;
 }
 
@@ -66,11 +68,12 @@ h6 {
     position: sticky;
     top: 0;
     z-index: 1000;
-   
+
 }
+
 /*Translate button*/
 #langBtn {
-      color:  aliceblue;
+    color: aliceblue;
 }
 
 /* Hero Section */
@@ -83,7 +86,7 @@ h6 {
     width: 100%;
     color: white;
     padding-top: 7rem;
-   
+
 }
 
 
@@ -105,8 +108,9 @@ h6 {
 
 /*classes section*/
 #classes {
-    background-color:var(--background-color-1) ;
+    background-color: var(--background-color-1);
 }
+
 #classes i {
 
     color: var(--secondary-color);
@@ -115,6 +119,7 @@ h6 {
     margin-top: 10px;
     margin-left: 10px;
 }
+
 /*enrollment section*/
 #enrollment {
     background-color: var(--background-color-2);
@@ -129,10 +134,35 @@ h6 {
     margin-left: 10px;
     margin-right: 8px;
 }
+
 #enrollment .card-text {
-    padding-left:80px;
+    padding-left: 80px;
 
 }
-#registration label, #registration button {
+
+#registration label,
+#registration button {
     font-weight: bold;
+}
+
+
+/*footer section*/
+/*contacts section*/
+#contacts {
+    background-color: var(--footer-color);
+    color: white;
+    padding: 2rem 0;
+}
+
+#contacts i {
+
+    color: white;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/*opening times table*/
+#contacts .table-dark * {
+    background-color: transparent;
+
 }
