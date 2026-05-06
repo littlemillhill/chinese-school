@@ -10,17 +10,14 @@ body {
 :root {
     --primary-color: #0077bb;
     --secondary-color: #3a0cc5;
-    --background-color: #f8f9fa;
+    --background-color-1: #f8fafb;
+    --background-color-2: #fff2ef;
     --text-color: #626161;
 }
 
-i {
 
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin-top: 10px;
-    margin-left: 10px;
+section {
+    padding-top:50px;
 }
 
 
@@ -46,9 +43,6 @@ h6 {
     color: var(--secondary-color);
 }
 
-main {
-    margin: 2rem 0;
-}
 
 
 /* navbar*/
@@ -62,7 +56,7 @@ main {
     color: aliceblue;
 }
 
-.navbar-custom .nav-link {
+.navbar-custom .nav-link ,.navbar-toggler {
     color: aliceblue;
 }
 
@@ -80,27 +74,65 @@ main {
 }
 
 /* Hero Section */
-.hero {
+#hero {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/BannerB.jpg');
     background-size: cover;
-    background-position: 50% 55%;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 65vh;
     width: 100%;
     color: white;
-    padding: 5rem 0;
-
+    padding-top: 7rem;
+   
 }
 
 
-.hero p {
+#hero p {
     font-size: 1.25rem;
     max-width: 600px;
     margin: 0 auto 2rem auto;
 }
 
-.hero .btn-primary {
+#hero .btn-primary {
     background-color: var(--primary-color);
     border: none;
     padding: 0.2rem 0.8rem;
     font-size: 1.2rem;
+}
+
+
+/***main content***/
+
+/*classes section*/
+#classes {
+    background-color:var(--background-color-1) ;
+}
+#classes i {
+
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/*enrollment section*/
+#enrollment {
+    background-color: var(--background-color-2);
+}
+
+#enrollment i {
+
+    color: red;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+#enrollment .card-text {
+    padding-left:80px;
+
+}
+#registration label, #registration button {
+    font-weight: bold;
+}
