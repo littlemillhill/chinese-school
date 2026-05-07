@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-    --primary-color: #0077bb;
+    --primary-color: #0467b6;
     --secondary-color: #4522f2;
     --background-color-1: #f2f9fe;
     --background-color-2: #f9f8f8;
@@ -95,7 +95,7 @@ body {
 
 /* Hero Section */
 #hero {
-    height: 65vh;
+    height: 85vh;
     width: 100%;
     position: relative;
     color: white;
@@ -104,7 +104,7 @@ body {
 }
 
 .hero-slide {
-    height: 65vh;
+    height: 85vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -124,7 +124,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 4rem;
+    padding-top: 6rem;
 }
 
 #hero p {
@@ -149,6 +149,7 @@ main section {
 
 /*classes section*/
 #classes {
+    margin-top:2px;
     background-color: var(--background-color-1);
     padding-bottom: 6rem;
 }
