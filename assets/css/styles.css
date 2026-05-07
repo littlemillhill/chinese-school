@@ -162,6 +162,12 @@ main section {
     margin-left: 10px;
 }
 
+#reception-icon i{
+   font-size: 1.2rem;
+ 
+
+    
+}
 #classes .btn {
     width: 100%;
     font-weight: bold;
