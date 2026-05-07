@@ -62,18 +62,22 @@
                         <a class="nav-link " href="https://peiyingschool.createaforum.com/" alt="homework"
                             target="_blank">Homework</a>
                     </li>
-                   
+
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#contacts">Contact Us</a>
                     </li>
                 </ul>
             </div>
-            <div class="d-flex">
-                <a class="btn custom-botton-filled ms-lg-3" href="index.html#enrollment">Enroll Now</a>
-            </div>
-            <div class="d-flex">
-                <button id="langBtn" class="btn">中文</button>
-            </div>
+
+            <!--google translate -->
+            <div class="d-flex ms-3">
+                <div class="d-flex">
+                    <button id="translateBtn" class="btn btn-outline-light">
+                        中文
+                    </button>
+                </div>
+
+                <div id="google_translate_element" style="display:none;"></div>
         </div>
 
     </nav>
@@ -82,9 +86,9 @@
 
 
     <!--main content-->
-    
-      <main class="container my-5">
-        
+
+    <main class="container my-5">
+
         <div class="container">
             <!-- Thank You Message -->
             <section class="my-5 text-center contact-section">
@@ -93,11 +97,11 @@
                 <a href="index.html" class="btn btn-primary">Return to Home</a>
             </section>
         </div>
-        
-        
+
+
     </main>
 
-    
+
 
     <!--footer-->
     <footer class="mt-auto">
@@ -119,6 +123,23 @@
     <script src="https://kit.fontawesome.com/68e551a4bc.js" crossorigin="anonymous"></script>
     <!--   google fonts -->
     <script src="https://fonts.googleapis.com/css2?family=Handlee&display=swap"></script>
+    <!-- Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,zh-CN',
+                    autoDisplay: false
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>
@@ -151,7 +172,7 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const title = document.querySelector('title');
 
-    const englishTexts = ['Home', 'About', 'Classes', 'Homework',  'Contact'];
+    const englishTexts = ['Home', 'About', 'Classes', 'Homework', 'Contact'];
     const chineseTexts = ['首页', '关于', '课程', '作业', '联系'];
 
     langBtn.addEventListener('click', function () {
@@ -169,6 +190,47 @@
                 link.textContent = englishTexts[index];
             });
         }
+    });
+</script>
+
+<!--google translate -->
+<script>
+
+    // Track current language
+    let isChinese = false;
+
+    // Find the translate button
+    document.getElementById("translateBtn").addEventListener("click", function () {
+
+        // Find Google Translate dropdown
+        const select = document.querySelector(".goog-te-combo");
+
+        // Stop if dropdown not loaded
+        if (!select) return;
+
+        // Change language
+        if (!isChinese) {
+
+            // Translate to Chinese
+            select.value = "zh-CN";
+
+            // Change button text
+            this.textContent = "English";
+
+        } else {
+
+            // Translate back to English
+            select.value = "en";
+
+            // Change button text
+            this.textContent = "中文";
+        }
+
+        // Trigger translation
+        select.dispatchEvent(new Event("change"));
+
+        // Switch language state
+        isChinese = !isChinese;
     });
 </script>
 

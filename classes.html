@@ -68,12 +68,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex">
-                <a class="btn custom-botton-filled ms-lg-3" href="index.html#enrollment">Enroll Now</a>
-            </div>
-            <div class="d-flex">
-                <button id="langBtn" class="btn">中文</button>
-            </div>
+
+             <!--google translate -->
+            <div class="d-flex ms-3">
+                <div class="d-flex">
+                    <button id="translateBtn" class="btn btn-outline-light">
+                        中文
+                    </button>
+                </div>
+
+                <div id="google_translate_element" style="display:none;"></div>
         </div>
 
     </nav>
@@ -233,6 +237,23 @@
     <!--   google fonts -->
     <script src="https://fonts.googleapis.com/css2?family=Handlee&display=swap"></script>
 
+    <!-- Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,zh-CN',
+                    autoDisplay: false
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
@@ -284,6 +305,47 @@
         }
     });
 </script>
+<!--google translate -->
+<script>
+
+    // Track current language
+    let isChinese = false;
+
+    // Find the translate button
+    document.getElementById("translateBtn").addEventListener("click", function () {
+
+        // Find Google Translate dropdown
+        const select = document.querySelector(".goog-te-combo");
+
+        // Stop if dropdown not loaded
+        if (!select) return;
+
+        // Change language
+        if (!isChinese) {
+
+            // Translate to Chinese
+            select.value = "zh-CN";
+
+            // Change button text
+            this.textContent = "English";
+
+        } else {
+
+            // Translate back to English
+            select.value = "en";
+
+            // Change button text
+            this.textContent = "中文";
+        }
+
+        // Trigger translation
+        select.dispatchEvent(new Event("change"));
+
+        // Switch language state
+        isChinese = !isChinese;
+    });
+</script>
+
 
 
 
