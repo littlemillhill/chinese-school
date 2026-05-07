@@ -59,7 +59,7 @@ h6 {
 }
 
 .navbar-custom .nav-link,
-.navbar-toggler {
+.navbar-toggler,.navbar-custom a {
     color: aliceblue;
 }
 
