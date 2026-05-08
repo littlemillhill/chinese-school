@@ -118,9 +118,9 @@
                 <h5 class="text-center subtitle-1 mb-5 ">Comprehensive curriculum designed to build proficiency at every
                     level</h5>
                 <div class="row justify-content-center">
-                    <div  class=" col-11 col-lg-3 col-md-6 mb-2 d-flex align-items-stretch ">
+                    <div class=" col-11 col-lg-3 col-md-6 mb-2 d-flex align-items-stretch ">
 
-                        <div class="card w-100" >
+                        <div class="card w-100">
                             <i class="fa-solid fa-school-flag m-2"></i>
                             <div class="card-body">
                                 <h5 class="card-title">Beginner class</h5>
@@ -136,14 +136,15 @@
                     </div>
 
                     <div class="col-11 col-lg-3 col-md-6 mb-2 d-flex align-items-stretch">
-                        <div class="card w-100" >
+                        <div class="card w-100">
                             <i class="fa-solid fa-book-bookmark m-2"></i>
                             <div class="card-body">
                                 <h5 class="card-title">Intermediate class</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">中级班</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card’s content.</p>
-                                <a href="classes.html#intermediate" class="card-link btn btn-outline-primary my-4 ">Intermediate class</a>
+                                <a href="classes.html#intermediate"
+                                    class="card-link btn btn-outline-primary my-4 ">Intermediate class</a>
 
                             </div>
                         </div>
@@ -151,14 +152,15 @@
 
                     </div>
                     <div class="col-11 col-lg-3 col-md-6 mb-2 d-flex align-items-stretch">
-                        <div class="card w-100" >
+                        <div class="card w-100">
                             <i class="fa-solid fa-book-open m-2"></i>
                             <div class="card-body">
                                 <h5 class="card-title">Advanced class</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">高级班</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card’s content.</p>
-                                <a href="classes.html#advanced" class="card-link btn btn-outline-primary my-4">Advanced class</a>
+                                <a href="classes.html#advanced" class="card-link btn btn-outline-primary my-4">Advanced
+                                    class</a>
 
                             </div>
                         </div>
@@ -168,14 +170,15 @@
                     </div>
                     <div class="col-11 col-lg-3 col-md-6 mb-2 d-flex align-items-stretch">
 
-                        <div class="card w-100" >
+                        <div class="card w-100">
                             <i class="fa-solid fa-landmark-flag m-2"></i>
                             <div class="card-body">
                                 <h5 class="card-title">GCSE Class</h5>
                                 <h6 class="card-subtitle mb-2 text-body-secondary">GCSE班</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card’s content.</p>
-                                <a href="classes.html#gcse" class="card-link btn btn-outline-primary my-4">GCSE Class</a>
+                                <a href="classes.html#gcse" class="card-link btn btn-outline-primary my-4">GCSE
+                                    Class</a>
 
                             </div>
 
@@ -209,10 +212,9 @@
                                 <h6 class="card-titles "><i
                                         class="fa-solid fa-location-dot"></i><strong>Location:</Time></strong></h6>
                                 <p class="card-text">Rui Jie Chinese School<br>
-                                    Sussex Way,<br>
-                                    Barnet,<br>
-                                    Hertfordshire,<br>
-                                    EN4 0BL
+                                    Nether Street<br>
+                                    London<br>
+                                    N3 1NR<br>
                                 </p>
                             </div>
                         </div>
@@ -337,7 +339,7 @@
 
         <!--contacts section-->
 
-        <section id="contacts" >
+        <section id="contacts">
             <div class="container section ">
                 <div class="row justify-content-center">
 
@@ -428,68 +430,69 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
-<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
 
-<script>
-    document
-        .querySelectorAll(".navbar-collapse .nav-link")
-        .forEach((link) => {
-            link.addEventListener("click", function (e) {
-                let section = document.querySelector(e.target.getAttribute("href"));
-                if (section) {
-                    e.preventDefault(); // Prevent default anchor click behavior
-                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-                    window.scroll({
-                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                        behavior: "smooth",
-                    });
-                    document
-                        .querySelector(".navbar-collapse")
-                        .classList.remove("show"); // Collapse navbar
-                }
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
             });
+    </script>
+    <!--google translate -->
+    <script>
+
+        // Track current language
+        let isChinese = false;
+
+        // Find the translate button
+        document.getElementById("translateBtn").addEventListener("click", function () {
+
+            // Find Google Translate dropdown
+            const select = document.querySelector(".goog-te-combo");
+
+            // Stop if dropdown not loaded
+            if (!select) return;
+
+            // Change language
+            if (!isChinese) {
+
+                // Translate to Chinese
+                select.value = "zh-CN";
+
+                // Change button text
+                this.textContent = "English";
+
+            } else {
+
+                // Translate back to English
+                select.value = "en";
+
+                // Change button text
+                this.textContent = "中文";
+            }
+
+            // Trigger translation
+            select.dispatchEvent(new Event("change"));
+
+            // Switch language state
+            isChinese = !isChinese;
         });
-</script>
-<!--google translate -->
-<script>
-
-    // Track current language
-    let isChinese = false;
-
-    // Find the translate button
-    document.getElementById("translateBtn").addEventListener("click", function () {
-
-        // Find Google Translate dropdown
-        const select = document.querySelector(".goog-te-combo");
-
-        // Stop if dropdown not loaded
-        if (!select) return;
-
-        // Change language
-        if (!isChinese) {
-
-            // Translate to Chinese
-            select.value = "zh-CN";
-
-            // Change button text
-            this.textContent = "English";
-
-        } else {
-
-            // Translate back to English
-            select.value = "en";
-
-            // Change button text
-            this.textContent = "中文";
-        }
-
-        // Trigger translation
-        select.dispatchEvent(new Event("change"));
-
-        // Switch language state
-        isChinese = !isChinese;
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
