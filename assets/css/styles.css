@@ -264,7 +264,26 @@ footer * {
     padding-bottom: 10px;
 }
 
-/*++++++thankful page++++++++*/
+/*++++++about page++++++++*/
+.about-img {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 576px) {
+    .about-img {
+        max-width: 280px;
+    }
+
+    #about-us p {
+        font-size: 1.2rem;
+    }
+
+    #about-us h1 {
+        font-size: 2.5rem;
+    }
+}
 
 
 
